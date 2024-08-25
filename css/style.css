@@ -446,12 +446,16 @@ main {
   padding: 20px;
   display: flex;
   gap: 50px;
+  flex-shrink: 1;
+  min-width: 400px;
   background-image: linear-gradient(145deg, #295dc7, #1e2864, #295dc7);
   border-radius: 45px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .desafio-contenido {
+  display: flex;
+  flex-direction: column;
   color: white;
   width: 70%;
   padding-left: 15px;
@@ -461,6 +465,7 @@ main {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 .desafio-contenido p {
@@ -471,6 +476,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  min-width: 70px;
 }
 
 .desafio-img-container img{
@@ -625,7 +632,7 @@ main {
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 59%;
+    right: 60.5%;
   }
 }
 
