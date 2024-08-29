@@ -327,6 +327,31 @@ header section {
 .btn-principal {
   font-size: 1.3rem;
 }
+
+/*-----------------------SPONSOR-----------------------*/
+#sponsors {
+  padding-top: 50px;
+}
+
+.sponsors-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.sponsor {
+  text-align: center;
+  width: 30%;
+  min-width: 250px;
+}
+
+.sponsor img{
+  max-width: 70%;
+  min-width: 150px;
+}
+
 /*Contador*/
 .contador-container {
   align-items: center;
