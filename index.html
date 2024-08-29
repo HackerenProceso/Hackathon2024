@@ -56,20 +56,18 @@
   </head>
   <body>
     <!-- BARRA DE NAVEGACIÓN -->
-    <header>
+    <header id="Welcome">
       <nav class="navbar">
         <div class="navbar-container">
           <div class="logo">
             <img
-              src="/images/tecsup_logo.webp"
-              alt="Logo Tecsup"
+              src="/images/Logo-Tecsup.png"
+              alt="Logo Tecsup" 
               loading="lazy"
-              width="133"
-              height="56"
             />
           </div>
           <div class="nav-links">
-            <a href="#inicio">INICIO</a>
+            <a href="#Welcome">INICIO</a>
             <a href="#info">INFO</a>
             <a href="#desafios">DESAFÍOS</a>
             <a href="#premios">PREMIOS</a>
@@ -93,12 +91,19 @@
             <img src="/images/hack.png" alt="Hack Image" class="hack" />
             <img src="/images/code.png" alt="Code Image" class="code" />
           </div>
-          <h1 class="display-4">
-            Soluciones Digitales para la Seguridad Ciudadana
-          </h1>
-          <h2 class="lead">
-            A NIVEL NACIONAL - 15 de Agosto al 02 de Septiembre
-          </h2>
+          <img class="ini" src="/images/Inicio Imagen.png" style="width: 35rem;">
+          <h1 class="display-4">Soluciones Digitales para <br>la Seguridad Ciudadana</h1>
+          <h2 class="lead">Convocatoria a NIVEL NACIONAL</h2>
+          <div class="icons-header">
+                  <div class="mess">
+                    <img src="/images/Calendario.png" alt="Icono" class="icon">
+                    <span>21 de Setiembre</span>
+                  </div>
+                  <div class="mess">
+                    <img src="/images/Laptop.png" alt="Icono" class="icon">
+                    <p>Modalidad Virtual</p>
+                  </div>
+          </div>
           <div class="nav-register">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSf_pMgHEFeapfIh_koCC0Etycvfg2CEib9TNhUNY3iEiUqm8g/viewform"
@@ -113,6 +118,47 @@
 
     <!-- SECCIONES -->
     <main>
+    <!--Contador-->
+      <section id="info" class="contador-container">
+        <h2>Inscríbete del <br> <span>15 de Agosto al 02 de Septiembre</span></h2>
+        <div class="contador">
+            <div class="digit" id="days">00</div>
+            <span>:</span>
+            <div class="digit" id="hours">00</div>
+            <span>:</span>
+            <div class="digit" id="minutes">00</div>
+        </div>
+      </section>
+      <!--DATOS-->
+      <section class="datos-container">
+        <div class="lin">
+          <div class="mitad" >
+            <h2>Tema <span>2024</span></h2>
+            <p>El tema de este año: <strong>“Soluciones Digitales
+              para la Seguridad Ciudadana”</strong> tiene como
+              objetivo desarrollar soluciones
+              tecnológicas innovadoras para abordar la
+              seguridad urbana, enfocándose en la
+              prevención del crimen, la gestión de
+              emergencias y la vigilancia comunitaria.</p>
+          </div>
+          <img  class="" src="/images/Tablet-con-manos.png" alt="">
+        </div>
+        <div class="lin">
+          <img  class="" src="/images/4-laptops.png" alt="">
+          <div class="mitad" >
+            <h2>Tema <span>2024</span></h2>
+            <p>El tema de este año: <strong>“Soluciones Digitales
+              para la Seguridad Ciudadana”</strong> tiene como
+              objetivo desarrollar soluciones
+              tecnológicas innovadoras para abordar la
+              seguridad urbana, enfocándose en la
+              prevención del crimen, la gestión de
+              emergencias y la vigilancia comunitaria.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- DESAFÍOS -->
       <section id="desafios">
         <div>
@@ -216,5 +262,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="/js/script.js"></script>
   </body>
 </html>
