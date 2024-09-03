@@ -577,7 +577,11 @@ main {
 
 /*-----------------------DESAFÍOS-----------------------*/
 #desafios {
-  padding: 10px;
+  padding: 100px 10px 10px 10px;
+}
+
+.desafios-header {
+  position: relative;
 }
 
 .desafios-container {
@@ -768,7 +772,6 @@ main {
 
 
 /*-----------------------MEDIA QUERIES-----------------------*/
-
 @media (min-width: 767px) {
   .footer-container::before {
     margin: 50px 0;
@@ -779,6 +782,27 @@ main {
     top: 0;
     bottom: 0;
     right: 60.5%;
+  }
+}
+
+@media (min-width: 1120px) {
+  .desafios-header::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 30px;
+    background-color: var(--color-celeste);
+    top: -12px;
+    right: 247px;
+  }
+
+  .desafios-header::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: var(--color-celeste);
+    right: 235px;
   }
 }
 
