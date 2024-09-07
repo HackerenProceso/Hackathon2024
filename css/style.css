@@ -822,12 +822,13 @@ main {
   }
 
   .nav-toggle {
+    display: none
+  }
+  .mobile{
     display: flex;
     align-items: center;
     cursor: pointer;
     font-size: 1.6rem;  
-  }
-  .nav-toggle-m{
     margin-left: 20px;
   }
 
@@ -1342,5 +1343,9 @@ main {
 
   .footer-img-container-tecsup {
     min-width: 290px;
+  }
+
+  .mobile{
+    display: none;
   }
 }
