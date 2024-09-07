@@ -106,6 +106,15 @@ li {
 }
 
 /* Barra de Navegación */
+/* RESPONSIVE */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  color: var(--color-blanco);
+  cursor: pointer;
+  padding: 10px;
+}
+/* RESPONSIVE */
 .navbar {
   padding: 10px 20px;
   background-color: var(--color-black);
@@ -149,6 +158,7 @@ li {
   text-decoration: none;
   padding: 10px;
   position: relative;
+  font-weight: 600;
 }
 
 .nav-links a:hover,
@@ -176,6 +186,11 @@ li {
 .nav-register {
   margin-left: auto;
   margin-top: 3rem;
+}
+.nav-register a:hover{
+  color: var(--color-botones);
+  background-color: var(--color-blanco);
+  font-weight: 900;
 }
 
 .nav-register a {
@@ -218,6 +233,8 @@ li {
   display: flex;
   flex-direction: row;
   margin-bottom: 3rem;
+  align-items: center;
+
 }
 .datos-container .lin:nth-child(2){
   margin-bottom: 8rem;
@@ -326,6 +343,9 @@ header section {
 
 .btn-principal {
   font-size: 1.3rem;
+}
+.inicio-container .ini{
+  width: 35rem;
 }
 
 /*-----------------------SPONSOR-----------------------*/
@@ -770,45 +790,557 @@ main {
   font-weight: 700;
 }
 
+.details a{
+  text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
 
 /*-----------------------MEDIA QUERIES-----------------------*/
-@media (min-width: 767px) {
-  .footer-container::before {
-    margin: 50px 0;
-    content: '';
-    width: 1.5px;
-    background-color: var(--color-blanco);
-    position: absolute;
+@media (max-width: 767px) {
+  #inicio {
+    background-image: none;
+    background-image: linear-gradient(145deg, #295dc7, #1e2864, #295dc7);
+  }
+
+  /* Barra de Navegación */
+  header section {
+    min-height: 90vh;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .inicio-container {
+    width: 100%;
+  }
+
+  .nav-register.show {
+    display: none;
+    opacity: 1;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.6rem;  
+  }
+  .nav-toggle-m{
+    margin-left: 20px;
+  }
+
+  .fa-burger {
+    display: block;
+  }
+
+  /* Estilos para el menú móvil como ventana emergente */
+  .nav-mobile {
+    display: none;
+    position: fixed; /* Fija el menú en la pantalla */
     top: 0;
-    bottom: 0;
-    right: 60.5%;
-  }
-}
-
-@media (min-width: 1120px) {
-  .desafios-header::after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 30px;
-    background-color: var(--color-celeste);
-    top: -12px;
-    right: 247px;
+    left: 0;
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background-color: black;
+    color: white;
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+    padding: 2rem;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
   }
 
-  .desafios-header::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 5px;
-    background-color: var(--color-celeste);
-    right: 235px;
+  .nav-mobile .nav-exit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Ajusta el espaciado entre el logo y el icono de cerrar */
+    margin-bottom: 4rem;
   }
-}
 
-@media (max-width: 550px) {
-  .footer-container {
-    padding-top: 40px;
+  .nav-mobile .nav-exit img {
+    width: 133px;
+  }
+
+  .nav-mobile .nav-exit i {
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .nav-links-mobile {
+    display: flex;
     flex-direction: column;
+  }
+  .nav-mobile a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    font-weight: 700;
+  }
+
+  .nav-register-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .nav-register-mobile a {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: white solid 2px;
+    font-weight: 600;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+  }
+
+  /*----Inicio----*/
+  .inicio-container .ini {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .display-4 {
+    font-size: 2.8rem;
+    margin-top: 3rem;
+  }
+
+  .icons-header .mess{
+    font-size: .8rem;
+    width: 35%;
+    text-align: left;
+    align-items: center;
+  }
+  .icons-header .mess:nth-child(2) {
+    margin-left: 4rem;
+  }
+
+  .icons-header .mess .icon:nth-child(2){
+    width: 5rem;
+  }
+  .inicio-container h1{
+    margin-left: 1rem;
+  }
+  .lead {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .nav-register {
+    display: block;
+    margin-top: -9rem;    
+    text-align: center;    
+    margin-bottom: 3rem;
+  }
+  .nav-register a{
+    font-size: 1.4rem;
+  }
+  .icons-header {
+    margin-top: 9rem;    
+    justify-content: center;
+    padding-left: 1rem;
+  }
+  /*CONTADOR*/
+  .contador-container h2 span{
+    font-size: 2.5rem;
+  }
+  .digit {
+    width: 50px;
+    padding: 25px 2px;
+    font-size: 25px;
+  }
+  /*-------Sponsors*/
+  /* Estilos generales */
+#sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.sponsors-list {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.sponsor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.sponsor img {
+  width: 100%;
+  height: auto;
+}
+#info{
+  padding-top: 0;
+}
+
+/* Imagen visible */
+.sponsor.active {
+  opacity: 1;
+}
+
+
+
+
+  /*----DATOS-----*/
+  .datos-container {
+    padding: 0 2rem;
+  }
+
+  .datos-container .lin {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    align-items: center;
+  }
+
+  .datos-container .lin .mitad {
+    width: auto;
+  }
+
+  .lin img {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .lin img:nth-child(2) {
+    display: none;
+  }
+
+  .datos-container p {
+    width: auto;
+    text-align: justify;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*------DESAFIOS----*/
+  #desafios {
+    padding: 0 2rem;
+  }
+  .desafio-contenido {
+    width: 80%;
+  }
+
+  .desafio-contenido h2 {
+    font-size: 1.5rem; 
+  }
+
+  .desafio-contenido p {
+    font-size: 1.2rem;
+  }
+
+  .desafio-img-container {
+    width: 20%;
+  }
+  .desafio {
+    width: auto;
+    min-width: auto;
+    gap: 1px;
+  }
+
+  /*-----PREMIOS----*/
+  .section-message {
+    font-size: 1.4rem;
+  }
+
+  .footer-container{    
+    padding: 3rem 0 0 0;
+  }
+
+  .footer-img-container-tecsup {
+    min-width: 290px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #inicio {
+    background-image: linear-gradient(145deg, #295dc7, #1e2864, #295dc7);
+  }
+
+  /* Barra de Navegación */
+  header section {
+    min-height: 90vh;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .inicio-container {
+    width: 100%;
+  }
+
+  .nav-register.show {
+    display: none;
+    opacity: 1;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.6rem;    
+    margin-left: 20%;
+  }
+
+  .fa-burger {
+    display: block;
+  }
+
+  /* Estilos para el menú móvil como ventana emergente */
+  .nav-mobile {
+    display: none;
+    position: fixed; /* Fija el menú en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background-color: black;
+    color: white;
+    z-index: 1000; /* Asegúrate de que esté sobre otros elementos */
+    padding: 2rem;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+  }
+
+  .nav-mobile .nav-exit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Ajusta el espaciado entre el logo y el icono de cerrar */
+    margin-bottom: 4rem;
+  }
+
+  .nav-mobile .nav-exit img {
+    width: 133px;
+  }
+
+  .nav-mobile .nav-exit i {
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-mobile a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    position: relative;
+    font-weight: 700;
+  }
+
+  .nav-register-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .nav-register-mobile a {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: white solid 2px;
+    font-weight: 600;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+  }
+
+  /*----Inicio----*/
+  .inicio-container .ini {
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .display-4 {
+    font-size: 3.2rem;
+  }
+
+  .icons-header .mess{
+    font-size: 1rem;
+    width: auto;
+    text-align: left;
+    align-items: center;
+  }
+  .icons-header .mess:nth-child(2) {
+    margin-left: 4rem;
+  }
+
+  .icons-header .mess .icon:nth-child(2){
+    width: 5rem;
+  }
+  .inicio-container h1{
+    margin-left: 1rem;
+  }
+  .lead {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .nav-register {
+    display: block;
+    margin-top: -9rem;    
+    text-align: center;    
+    margin-bottom: 3rem;
+  }
+  .nav-register a{
+    font-size: 1.4rem;
+  }
+  .icons-header {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+    padding-left: 1rem;
+  }
+  /*CONTADOR*/
+  .contador-container h2 span{
+    font-size: 2.5rem;
+  }
+
+  /*-------Sponsors*/
+  /* Estilos generales */
+#sponsors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+.sponsors-list {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.sponsor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.sponsor img {
+  width: 100%;
+  height: auto;
+}
+#info{
+  padding-top: 0;
+}
+
+/* Imagen visible */
+.sponsor.active {
+  opacity: 1;
+}
+
+
+
+
+  /*----DATOS-----*/
+  .datos-container {
+    padding: 0 2rem;
+  }
+
+  .datos-container .lin {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    align-items: center;
+  }
+
+  .datos-container .lin .mitad {
+    width: auto;
+  }
+
+  .lin img {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+  .lin img:nth-child(2) {
+    display: none;
+  }
+
+  .datos-container p {
+    width: auto;
+    text-align: justify;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*------DESAFIOS----*/
+  #desafios {
+    padding: 0 2rem;
+  }
+  .desafio-contenido {
+    width: 80%;
+  }
+
+  .desafio-contenido h2 {
+    font-size: 2.2rem; 
+  }
+
+  .desafio-contenido p {
+    font-size: 1.5rem;
+  }
+
+  .desafio-img-container {
+    width: 20%;
+  }
+  .desafio {
+    width: auto;
+    min-width: auto;
+    padding: 30px 20px;
+    gap: 1px;
+  }
+
+  /*-----PREMIOS----*/
+  .section-message {
+    font-size: 1.4rem;
+  }
+
+  .footer-container{    
+    padding: 3rem 0 0 0;
+  }
+
+  .footer-img-container-tecsup {
+    min-width: 290px;
   }
 }
